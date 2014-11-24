@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tears in the Rain</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <script src="js/modernizr.js"></script>
+</head>
+<body>
+
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="flippy">
+  <div class="front">
+    <div id="death-widget">
+      <h1><span id="days"></span></h1>
+      <h2><span id="hours"></span>, <span id="minutes"></span> and <span id="seconds"></span> left</h2>
+      <h5>and a <span id="deathprob"></span> chance of dying this year.</h5>
+      <h4>Make it count</h4>
+    </div>
+  </div>
+  <div class="back">
+    <div id="controls" class="row">
+      <div class="columns large-12">
+        <h2>Birthday:</h2>
+        <div id="birthday-picker"></div>
+        <input type="radio" name="sex" value="m"/> Male
+        <input type="radio" name="sex" value="f"/> Female
+        <div><input type="checkbox" name="smoker" value="1"/> Smoker</div>
+        <div><input type="checkbox" name="smoker" value="1"/> Remember (Store Cookie)</div>
+        <a href="#" class="small round button return">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <a id="about" class="round button" href="#about" title="About/Help" data-reveal-id="myModal">?</a>
+
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>What is this?!?</h2>
+  <p class="lead">It's a quick and dirty estimation of how many days you have left on earth to do... whatever it is you're going to do.</p>
+
+  <h2>What's with the name?</h2>
+  <p>Look it up. If you don't know then I'm excited for what you're about to find.</p>
+
+  <h2>Sorcery! How could you know when I'm going to die?!?</h2>
+  <p>A guess is made, based on <a href="http://www.ssa.gov/oact/STATS/table4c6.html#fn2" target="_blank">life expectancy tables kept by the US Social Security website</a> (US only for now, sorry).</p>
+
+  <p>Then we take 10 years off if you're a smoker.</p>
+
+  <h2>It's not very accurate.</h2>
+  <p>You're not very accurate! It's not meant to be accurate. Just poignant. Nobody will ever know when you're going to die except you and by the time you figure it out it will be too late to update this site.</p>
+
+  <h2>This is depressing! WHY ARE YOU DOING THIS?!?</h2>
+  <p>Life is so painfully, tragically short and we're terrible at realizing it. This tool is here to help you not waste any more time.</p>
+
+  <h2>Do you collect my data?</h2>
+  <p>Nope. It only remembers because it stores a cookie on your computer. We don't collect anything except google analytics.</p>
+
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+  <script src="js/app.js"></script>
+
+
+</body>
+</html>

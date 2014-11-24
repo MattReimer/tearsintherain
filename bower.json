@@ -1,0 +1,12 @@
+{
+  "name": "tears-in-the-rain",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "ionicons": "~1.5.2",
+    "moment": "~2.8.4",
+    "birthday-picker": "~0.1.1",
+    "jquery-cookie": "~1.4.1"
+  }
+}
