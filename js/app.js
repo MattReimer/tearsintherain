@@ -6,10 +6,9 @@ var dprob;
 var lifeleft = 0;
 
 $(document).foundation();
-$(document).on('change','#birthday-picker select', formParse);
-$(document).on('change','input[name^="sex"]', formParse);
 
-$(document).on('change','input[name^="smoker"]', formParse);
+$(document).on('change','#birthday-picker select', formParse);
+$(document).on('change','input', formParse);
 
 $(document).ready(function(){ 
 
@@ -36,22 +35,25 @@ $(document).ready(function(){
       lifeleft = moment.duration(moment(dday).diff(moment()));
 
       // Let's do days
-      var day = moment.duration(Math.floor(lifeleft.asDays()));
+      var day = Math.floor(lifeleft.asDays());
       daylang = " Days";
       if (day < 2 ) daylang = " Day"
-        $('#days').text(day + daylang).digits();
+      $('#days').text(day).digits();
+      $('#daylang').text(daylang).digits();
 
       // Let's do hours
       var hours = lifeleft.hours();
       hourlang = " Hours";
       if (hours < 2 ) hourlang = " Hour"
-        $('#hours').text(hours + hourlang).digits();
+        $('#hours').text(hours);
+      $('#hourlang').text(hourlang);
 
       // Let's do minutes
       var minutes = lifeleft.minutes();
       minutelang = " Minutes";
       if (minutes < 2 ) minutelang = " Minute"
-        $('#minutes').text(minutes + minutelang).digits();
+        $('#minutes').text(minutes);
+      $('#minutelang').text(minutelang);
 
       // Let's do seconds
       $('#seconds').text(lifeleft.seconds());
@@ -94,10 +96,8 @@ function CookieCutter(){
 function formParse(){
   var birthday = $('#birthdate').val();
   var sex = $("input[name=sex]:checked").val();
-  var smoker = $("input[name=smoker]:checked").val();
-
-  if (sex != 5) sex = 2;
-  if (smoker != 1) smoker = 0;
+  var smoker = $("input[name=smoker]:checked").length == 0 ? false : true;
+  var keepcookie = $("input[name=cookie]:checked").length == 0 ? false : true;
 
   // Test for valid birthday and calculate death day.
   if (typeof birthday != "undefined" && moment(birthday).isValid()){
@@ -115,16 +115,26 @@ function formParse(){
         var expectedDeathProb = data[age][3];
       }
 
+      // Smokers get 10 years taken off.
       if (smoker == 1){
         expectedLifeLEft-=10;
         if (expectedLifeLEft < 0 ) expectedLifeLEft = 0;
       }
+
+      // Probability that you will die this year.
       dprob = Math.round(expectedDeathProb * 100) + "%";
       if (dprob == "0%") dprob = "small";
+
+      // Find the day you're going to die.
       dday = moment().add(expectedLifeLEft, 'years');
+
       AppReady = true;
-      console.log('setting cookie');
-      $.cookie('bd', '{ bd: "'+birthday+'", s: "'+sex+'"}', { expires: 30 });
+
+      if (keepcookie){
+        console.log('setcookie');
+        $.cookie('bd', '{ bd: "'+birthday+'", s: "'+sex+'"}', { expires: 30 });        
+      }
+      console.log('validated');
       $('.return').show();
     }
   }
