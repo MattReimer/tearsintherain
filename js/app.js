@@ -282,6 +282,7 @@ data={
 var AppReady = false;
 var dday;
 var dprob;
+var replicant = false;
 var lifeleft = 0;
 
 $(document).foundation();
@@ -334,6 +335,11 @@ $(document).ready(function(){
         $('#minutes').text(minutes);
       $('#minutelang').text(minutelang);
 
+      // Replicant
+      if (replicant){
+        $('borrowed').text('You\'re on borrowed time, Replicant');
+      }
+
       // Let's do seconds
       $('#seconds').text(lifeleft.seconds());
 
@@ -357,6 +363,7 @@ function CookieCutter(){
   var birthday = DateStrip(cookies.bd);
   var sex = StringSaver(cookies.s);
   var smoker = StringSaver(cookies.sm);
+  var replicant = StringSaver(cookies.rp);
 
   if (sex != "f") sex = "m";
   if (smoker != 1) smoker = 0;
@@ -368,6 +375,9 @@ function CookieCutter(){
     if (smoker == 1){
       $("input[name=smoker]").attr('checked', 'checked');
     }
+    if (replicant == 1){
+      $("input[name=replicant]").attr('checked', 'checked');
+    }
   }
 }
 
@@ -377,6 +387,7 @@ function formParse(){
   var sex = $("input[name=sex]:checked").val();
   var smoker = $("input[name=smoker]:checked").length == 0 ? false : true;
   var keepcookie = $("input[name=cookie]:checked").length == 0 ? false : true;
+  replicant = $("input[name=replicant]:checked").length == 0 ? false : true;
 
   // Test for valid birthday and calculate death day.
   if (typeof birthday != "undefined" && moment(birthday).isValid()){
@@ -398,6 +409,11 @@ function formParse(){
       if (smoker == 1){
         expectedLifeLEft-=10;
         if (expectedLifeLEft < 0 ) expectedLifeLEft = 0;
+      }
+
+      // Replicants get 4 years tops. That is the law.
+      if (replicant == 1){
+        expectedLifeLEft=4;
       }
 
       // Probability that you will die this year.
