@@ -87,7 +87,8 @@ function CookieCutter(){
   var replicant = StringSaver(cookies.rp);
 
   if (sex != "f") sex = "m";
-  if (smoker != 1) smoker = 0;
+  if (smoker != true) smoker = false;
+  if (replicant != true) replicant = false;
 
   if (moment(birthday).isValid()){
     console('cookie imported');
