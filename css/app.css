@@ -15871,12 +15871,19 @@ body {
   text-align: center; }
   #death-widget h1 {
     font-size: 10rem;
+    line-height: 1;
     color: white; }
   #death-widget h2 {
     font-size: 5rem;
+    line-height: 1;
     color: white; }
   #death-widget h5, #death-widget h4 {
     color: white; }
+  #death-widget #tagline {
+    line-height: 3; }
+  #death-widget .lang {
+    text-transform: uppercase;
+    font-size: 50%; }
 
 .back .columns {
   background: #80868d; }

@@ -14,10 +14,16 @@
 <div class="flippy">
   <div class="front">
     <div id="death-widget">
-      <h1><span id="days"></span></h1>
-      <h2><span id="hours"></span>, <span id="minutes"></span> and <span id="seconds"></span> left</h2>
-      <h5>and a <span id="deathprob"></span> chance of dying this year.</h5>
-      <h4>Make it count</h4>
+      <h1 id="topline">
+        <span id="days"></span> 
+        <span id="daylang" class="lang"></span></h1>
+      <h2>
+        <span id="hours"></span> <span id="hourlang" class="lang"></span>, 
+        <span id="minutes"></span> <span id="minutelang" class="lang"></span> 
+        <span class="lang">and </span>
+        <span id="seconds"></span> <span class="lang">left</span></h2>
+      <h5 id="dprob">Plus a <span id="deathprob"></span> chance of dying this year.</h5>
+      <h4 id="tagline">Make it count</h4>
     </div>
   </div>
   <div class="back">
@@ -28,8 +34,8 @@
         <input type="radio" name="sex" value="m"/> Male
         <input type="radio" name="sex" value="f"/> Female
         <div><input type="checkbox" name="smoker" value="1"/> Smoker</div>
-        <div><input type="checkbox" name="smoker" value="1"/> Remember (Store Cookie)</div>
-        <a href="#" class="small round button return">Submit</a>
+        <div><input type="checkbox" name="cookie" value="1"/> Remember (Store Cookie)</div>
+        <a href="#" class="small round button return">Show me</a>
       </div>
     </div>
   </div>
@@ -44,16 +50,18 @@
   <h2>What's with the name?</h2>
   <p>Look it up. If you don't know then I'm excited for what you're about to find.</p>
 
-  <h2>Sorcery! How could you know when I'm going to die?!?</h2>
+  <h2>Sorcery! How could you posibly know this?!?</h2>
   <p>A guess is made, based on <a href="http://www.ssa.gov/oact/STATS/table4c6.html#fn2" target="_blank">life expectancy tables kept by the US Social Security website</a> (US only for now, sorry).</p>
 
   <p>Then we take 10 years off if you're a smoker.</p>
 
-  <h2>It's not very accurate.</h2>
+  <h2>That's not very accurate.</h2>
+
   <p>You're not very accurate! It's not meant to be accurate. Just poignant. Nobody will ever know when you're going to die except you and by the time you figure it out it will be too late to update this site.</p>
 
   <h2>This is depressing! WHY ARE YOU DOING THIS?!?</h2>
-  <p>Life is so painfully, tragically short and we're terrible at realizing it. This tool is here to help you not waste any more time.</p>
+
+  <p>Life is so painfully, tragically short and we're terrible at realizing it. This tool is here to help you stop wasting time.</p>
 
   <h2>Do you collect my data?</h2>
   <p>Nope. It only remembers because it stores a cookie on your computer. We don't collect anything except google analytics.</p>
