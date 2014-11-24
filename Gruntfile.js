@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         files: [
           { expand:true, cwd:'', src:'index.html', dest: 'Deploy/' },
           { expand:true, cwd:'bower_components/modernizr/', src:'modernizr.js', dest: 'Deploy/js' },
-          { expand:true, cwd:'bower_components/jquery/dist/', src:'jquery.min.js', dest: 'Deploy/js' },
+          { expand:true, cwd:'bower_components/jquery/dist/', src:'jquery.min.map', dest: 'Deploy/js' },
           { expand:true, cwd:'bower_components/ionicons/fonts', src:'ionicons.*', dest: 'Deploy/fonts' }
         ],
       },
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  // grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Here are our tasks 
   grunt.registerTask('default', [ 'init' ]);
