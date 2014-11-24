@@ -105,7 +105,7 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Here are our tasks 
-  grunt.registerTask('default', [ 'init' ]);
+  grunt.registerTask('default', [ 'deploy' ]);
   grunt.registerTask('init', ['copy:bowerlibs','concat']);
   grunt.registerTask('deploy', [ 'compass:dist', 'concat','copy:deploy']);
   grunt.registerTask('dev', [ 'watch' ]);
