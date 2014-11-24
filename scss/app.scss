@@ -62,9 +62,14 @@ body{ background: #29467f; }
 
 } 
 
+fieldset.birthday-picker{
+  border: medium none;
+  margin: 0;
+}
+
 
 .back .columns{
-   background: #80868d;
+   background: White;
 }
 
 .birthday-picker select{
