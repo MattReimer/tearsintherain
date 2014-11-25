@@ -71,6 +71,7 @@ module.exports = function(grunt) {
             'bower_components/jquery-cookie/jquery.cookie.js',
             'js/data.json',
             'js/app.js',
+            'js/waterdrops.js'
 
           ],
           dest: 'Deploy/js/app.js',

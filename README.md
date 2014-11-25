@@ -44,14 +44,13 @@ This app was easier to write because of the following libraries:
 * [moment](http://momentjs.com/)
 * [foundation](http://foundation.zurb.com)
 * [ionicons](http://ionicons.com/)
+* [CSS: Water Drop Effect](http://abduzeedo.com/water-drop-effect-html-css)
 
 
 
 ## Todo:
 
 * All white text with rounded outlines. like etched glass
-* blurry picture background
-* Droplets
 * explorer mode
   * Turn off sleep, eat, 
   * Display in hours, minutes, seconds
