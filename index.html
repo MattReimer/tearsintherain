@@ -32,32 +32,35 @@
       <div class="columns large-12">
         <h4>Birthday:</h4>
         <div id="birthday-picker"></div>
-        <div class="clearfix">
-          <h3 class="left">Male</h3>
-          <div class="switch round large left">
-            <input id="exampleRadioSwitch3" type="radio" name="smoker">
-            <label for="exampleRadioSwitch3"></label>
+        <div class="row">
+          <div class="columns small-3"><h3 class="right">M</h3><</div>
+          <div class="columns small-6">
+          <div class="range-slider" data-slider>
+            <span class="range-slider-handle" role="slider" tabindex="0"></span>
+            <span class="range-slider-active-segment"></span>
+            <input type="hidden">
           </div>
-          <h3>Female</h3>
+          </div>
+          <div class="columns small-3"><h3 class="left">F</h3></div>
         </div>
         <div class="clearfix">
           <div class="switch round large left">
-            <input id="exampleRadioSwitch3" type="radio" name="smoker">
-            <label for="exampleRadioSwitch3"></label>
+            <input id="smoker" type="radio" name="smoker">
+            <label for="smoker"></label>
           </div>
           <h3>Smoker</h3>
         </div>
         <div class="clearfix">
           <div class="switch round large left">
-            <input id="exampleRadioSwitch3" type="radio" name="replicant">
-            <label for="exampleRadioSwitch3"></label>
+            <input id="replicant" type="radio" name="replicant">
+            <label for="replicant"></label>
           </div>
           <h3>Replicant</h3>
         </div>
         <div class="clearfix">
           <div class="switch round large left">
-            <input id="exampleRadioSwitch3" type="radio" name="cookie">
-            <label for="exampleRadioSwitch3"></label>
+            <input id="cookie" type="radio" name="cookie">
+            <label for="cookie"></label>
           </div>
           <h3>Remember Me (store a cookie)</h3>
         </div>
@@ -68,13 +71,35 @@
 </div>
 
 
-  <a id="about" class="round button" href="#about" title="About/Help" data-reveal-id="myModal">?</a>
+  <a id="faq" class="round button" href="#faq" title="FAQ" data-reveal-id="FAQModal">?</a>
+  <a id="info" class="round button" href="#info" title="About this App" data-reveal-id="FAQModal">?</a>
 
-<div id="myModal" class="reveal-modal" data-reveal>
+<div id="FAQModal" class="reveal-modal" data-reveal>
+
+<h2>Attribution:</h2>
+
+This app was made better by using open source parts. Open source is made better by sharing and shouting out when  someone makes something amazing and you use it:
+
+<h3>Ideas and Inspiration</h3>
+
+
+<h3>Libraries</h3>
+
+fontcustom (see below)
+
+<ul>
+  <li>MomentJS</li>
+</ul>
+
+<h3>Icons</h3>
+Sunrise designed by <a href="http://www.thenounproject.com/blaisetsewell">Blaise Sewell</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
+</div>
+
+<div id="FAQModal" class="reveal-modal" data-reveal>
   <h2>What is this?!?</h2>
   <p class="lead">It's a quick and dirty estimation of how many days you have left on earth to do... whatever it is you're going to do.</p>
 
-  <h2>What's with the name?</h2>
+  <h2>What's with the domain name?</h2>
   <p>Look it up. If you don't know then I'm excited for what you're about to find out.</p>
 
   <h2>Sorcery! How could you posibly know this?!?</h2>

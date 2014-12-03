@@ -1,7 +1,7 @@
 // From http://abduzeedo.com/water-drop-effect-html-css
 $(document).ready(function(){
 
-  ndrops = 400;
+  ndrops = 200;
   addDrops();
   // moveDrops();
   

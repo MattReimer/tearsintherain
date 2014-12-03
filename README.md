@@ -51,6 +51,9 @@ This app was easier to write because of the following libraries:
 ## Todo:
 
 * All white text with rounded outlines. like etched glass
-* explorer mode
-  * Turn off sleep, eat, 
-  * Display in hours, minutes, seconds
+* http://olance.github.io/jQuery-switchButton/
+* http://jqueryui.com/slider/
+
+## Useful ionicons
+
+ion-gear-b

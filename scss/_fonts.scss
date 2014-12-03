@@ -1,0 +1,57 @@
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("./fontcustom_8d5cbd763f59fb83af15c1d10c527087.eot");
+  src: url("./fontcustom_8d5cbd763f59fb83af15c1d10c527087.eot?#iefix") format("embedded-opentype"),
+       url("./fontcustom_8d5cbd763f59fb83af15c1d10c527087.woff") format("woff"),
+       url("./fontcustom_8d5cbd763f59fb83af15c1d10c527087.ttf") format("truetype"),
+       url("./fontcustom_8d5cbd763f59fb83af15c1d10c527087.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("./fontcustom_8d5cbd763f59fb83af15c1d10c527087.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-android-information:before,
+.icon-android-mixer:before,
+.icon-icon_117:before,
+.icon-icon_129:before,
+.icon-icon_146:before,
+.icon-icon_62030:before,
+.icon-icon_6450:before,
+.icon-icon_76320:before,
+.icon-icon_80793:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-android-information:before { content: "\f100"; }
+.icon-android-mixer:before { content: "\f101"; }
+.icon-icon_117:before { content: "\f102"; }
+.icon-icon_129:before { content: "\f103"; }
+.icon-icon_146:before { content: "\f104"; }
+.icon-icon_62030:before { content: "\f105"; }
+.icon-icon_6450:before { content: "\f106"; }
+.icon-icon_76320:before { content: "\f107"; }
+.icon-icon_80793:before { content: "\f108"; }
