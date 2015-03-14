@@ -37,6 +37,8 @@ module.exports = function(grunt) {
       deploy: {
         files: [
           { expand:true, cwd:'', src:'index.html', dest: 'Deploy/' },
+          { expand:true, cwd:'', src:'bg.jpg', dest: 'Deploy/' },
+          { expand:true, cwd:'', src:'CNAME', dest: 'Deploy/},
           { expand:true, cwd:'bower_components/modernizr/', src:'modernizr.js', dest: 'Deploy/js' },
           { expand:true, cwd:'bower_components/jquery/dist/', src:'jquery.min.map', dest: 'Deploy/js' },
           { expand:true, cwd:'bower_components/ionicons/fonts', src:'ionicons.*', dest: 'Deploy/fonts' }
